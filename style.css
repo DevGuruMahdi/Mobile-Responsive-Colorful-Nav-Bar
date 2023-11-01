@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:wght@300&display=swap');
+
+:root {
+    --contrast-1: navy;
+    --contrast-2: rgb(0, 79, 128);
+    --contrast-3: rgb(101, 43, 143);
+    --contrast-4: rgb(45, 104, 76);
+    --homeColor: #0447ff;
+    --aboutColor: #0fc676;
+    --contactColor: #df1040;
+    --serviceColor: #e3f301;
+    --btnColor: #652fe2;
+    --btnHoverColor: #4b328c;
+    --tglBtnColor: #1e123d;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(90deg, rgb(64, 112, 122) 0%, rgb(74, 101, 147) 98%);
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+
+}
+
+header {
+    background: linear-gradient(90deg, rgb(207, 87, 123) 0%, rgb(139, 102, 241) 100%);
+    /* background-color: var(--contrast-1); */
+    /* background-color: var(--contrast-2); */
+    /* background-color: var(--contrast-3); */
+    /* background-color: var(--contrast-4); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    /* box-shadow: 1px 1px 10px 2px rgba(101, 178, 203, 0.37); */
+}
+
+nav {
+    margin: 0;
+
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 0px 40px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li .one:hover {
+    color: var(--homeColor);
+}
+
+li .two:hover {
+    color: var(--aboutColor);
+}
+
+li .three:hover {
+    color: var(--contactColor);
+}
+
+li .four:hover {
+    color: var(--serviceColor);
+}
+
+.btn {
+
+    border: none;
+    background-color: var(--btnColor);
+    color: rgb(236, 233, 230);
+    padding: 13px 29px;
+    border-radius: 25px;
+    margin-right: 35px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.btn:hover {
+    background-color: var(--btnHoverColor);
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: 0.2s ease-in-out all;
+}
+
+.tgl_btn {
+    color: var(--tglBtnColor);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* body section */
+section#body {
+    padding: 0px 10px;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffff;
+}
+
+#body h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+#body p {
+    font-weight: 300;
+}
+
+/* dropdown menu */
+.dropdown {
+    position: absolute;
+    right: 2rem;
+    top: 86px;
+    width: 300px;
+    height: 0;
+    background-color: rgba(99, 169, 195, 0.467);
+    backdrop-filter: blur(15px);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+    display: none;
+}
+
+.dropdown.open {
+    height: 244px;
+}
+
+.btn2 {
+    margin: 10px;
+    width: 93%;
+    font-size: 14px;
+    border: none;
+    background-color: var(--btnColor);
+    color: rgb(236, 233, 230);
+    padding: 13px 29px;
+    border-radius: 25px;
+    margin-right: 35px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+
+
+}
+
+.btn2:hover {
+    background-color: var(--btnHoverColor);
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: 0.2s ease-in-out all;
+}
+
+.dropdown li {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive Design for and tablet */
+@media only screen and (max-width:916px) {
+
+    nav ul li,
+    .btn {
+        display: none;
+    }
+
+    .tgl_btn,
+    .dropdown {
+        display: block;
+    }
+
+
+}
+
+@media only screen and (max-width:576px) {
+    .dropdown {
+        left: 2rem;
+        width: unset;
+    }
+}
